@@ -2,8 +2,21 @@ name: PreApproval
 on: workflow_dispatch
 jobs:
   Build:
-    name: Trigger
+    name: CreateBranch
     runs-on: ubuntu-latest
     steps:    
     - name : echo
       run: echo "deployment"
+    - name: Checkout repository​
+      uses: actions/checkout@v2​
+    - name: Set up Git​
+      run: |​
+        git config --global user.name '2093586'​
+        git config --global user.email '2093586@cognizant.com'
+     - name: Create release branch​
+       run: |​
+         git checkout -b release/2024.1​
+         git push origin release/​2024.1​
+​
+
+
