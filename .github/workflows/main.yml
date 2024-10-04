@@ -1,0 +1,10 @@
+name: SITworkflow
+on: workflow_dispatch
+jobs:
+  Build:
+    name: Build Npm project
+#runs-on is agent
+    runs-on: ubuntu-latest
+    steps:    
+    - name : Build
+      run: echo "deployment"
