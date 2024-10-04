@@ -1,0 +1,9 @@
+name: PreApproval
+on: workflow_dispatch
+jobs:
+  Build:
+    name: Trigger
+    runs-on: ubuntu-latest
+    steps:    
+    - name : echo
+      run: echo "deployment"
