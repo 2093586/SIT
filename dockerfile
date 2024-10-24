@@ -15,15 +15,6 @@ RUN powershell -Command \
     Expand-Archive -Path runner.zip -DestinationPath .; \
     Remove-Item -Force runner.zip
 
-# Install required dependencies (e.g., Git)
-RUN powershell -Command \
-    Invoke-WebRequest -Uri https://github.com/git-for-windows/git/releases/latest/download/PortableGit-x64.7z.exe -OutFile git.7z; \
-    7z x git.7z -oC:\git; \
-    Remove-Item -Force git.7z
-
-# Add Git to the PATH
-ENV PATH="C:\git\cmd;${PATH}"
-
 # Configure the GitHub Actions runner
 RUN .\config.cmd --url https://github.com/${RUNNER_REPOSITORY} --token ${RUNNER_TOKEN}
 
