@@ -26,9 +26,10 @@ jobs:
           password: dckr_pat_V0RvQkYrFBDUdwO8dtcOf_M6IWg
       - name:
         run : |
-         docker pull nginx:latest
-         docker tag nginx:latest sgulhane/automation:v1
-         docker push sgulhane/automation
+         docker pull nginx
+         docker images
+         docker tag nginx sgulhane/automation:v1
+         docker push sgulhane/automation:v1
 
       - name: Log out from Docker Hub
         run: docker logout
