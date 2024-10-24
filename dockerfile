@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/windows/servercore:ltsc2022
 # Set environment variables for the runner
 ENV RUNNER_VERSION=2.307.0
 ENV RUNNER_NAME=sourabh
-ENV RUNNER_TOKEN=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
+ENV RUNNER_TOKEN=BL2IIELQE36IMOWDLLMSEGTHDKTGM
 ENV RUNNER_REPOSITORY=https://github.com/2093586/TR
 ENV RUNNER_WORKDIR=C:\actions-runner
 # Create working directory
