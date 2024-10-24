@@ -16,7 +16,7 @@ RUN powershell -Command \
     Remove-Item -Force runner.zip
 
 # Configure the GitHub Actions runner
-RUN .\config.cmd --url https://github.com/sgullluu/DevOps-Files --token AKKVT2CLUSZI5CTPL65R6GLHDKUBG --unattended 
+RUN .\config.cmd --url https://github.com/2093586/SIT --token BL2IIEIBSMKPL4ZSXZOAVPTHDKVMQ--unattended 
 
 # Start the GitHub Actions runner
 CMD ["cmd", "/c", ".\\run.cmd"]
